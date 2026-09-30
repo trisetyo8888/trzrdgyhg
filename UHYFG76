@@ -94,12 +94,39 @@ http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=895004&ex
 #EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/NEDERLAND/ChampionsLeague.png" group-title="┃UCL┃ CHAMPIONS LEAGUE",┃UCL┃ TABII SPOR 6 HD [TR]
 http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=895005&extension=ts&play_token=nDtqKNpf1p
 
+==============================================================
 
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 1.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 1 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314077&extension=ts&play_token=5VAYFNXcIN
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 2.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 2 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314078&extension=ts&play_token=sZNsrC3mF5
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 3.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 3 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314079&extension=ts&play_token=KiMnp2O7k0
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 4.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 4 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314080&extension=ts&play_token=iR58pVRTnc
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 5.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 5 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314081&extension=ts&play_token=wLxUdAdWA2
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 6.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 6 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314082&extension=ts&play_token=Xb30vkOegL
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 7.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 7 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314083&extension=ts&play_token=VVevN5bTDf
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 8.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 8 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314084&extension=ts&play_token=qX9k9lIkwY
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 9.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 9 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314085&extension=ts&play_token=UwlQEMujcm
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 10.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 10 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314086&extension=ts&play_token=ZKNCidywa2
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 11.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 11 FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314087&extension=ts&play_token=6mtpIds0Eu
 
+==============================================================
 
-
-
-
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/GREECE/Novasports21.png" group-title="PREMIER LEAGUE",┃GR┃ NOVA SPORTS PREMIER LEAGUE FHD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1879&extension=ts&play_token=z4E9fQliqE
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/GREECE/Novasports21.png" group-title="PREMIER LEAGUE",┃GR┃ NOVA SPORTS PREMIER LEAGUE HD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=663683&extension=ts&play_token=HAGsjihfQK
+#EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/GREECE/Novasports21.png" group-title="PREMIER LEAGUE",┃GR┃ NOVA SPORTS PREMIER LEAGUE SD
+http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1648349&extension=ts&play_token=ZZoSJFE7sJ
 
 
 
