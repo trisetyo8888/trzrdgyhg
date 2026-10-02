@@ -96,6 +96,19 @@ http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=895005&ex
 
 ==============================================================
 
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/MANCHESTERUNITED.png" group-title="PREMIER LEAGUE",UK| MANCHESTER UNITED HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=725954&extension=ts&play_token=AV7PH5dknT
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/CHELSEA.png" group-title="PREMIER LEAGUE",UK| CHELSEA TV HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=45327&extension=ts&play_token=OZEvx9LG6v
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/LFC.png" group-title="PREMIER LEAGUE",UK| LFC TV FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=910647&extension=ts&play_token=Xn5MXEhLZ2
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/LFC.png" group-title="PREMIER LEAGUE",UK| LFC TV
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=45268&extension=ts&play_token=XBaeAXHxTn
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/MUTV.png" group-title="PREMIER LEAGUE",UK| MUTV FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=45324&extension=ts&play_token=VxmmyczBMf
+
+==============================================================
+
 #EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 1.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 1 FHD
 http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1314077&extension=ts&play_token=5VAYFNXcIN
 #EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/UK/┃UK┃ HUB PREMIER PPV/HUB PREMIER 2.png" group-title="PREMIER LEAGUE",┃UK┃ HUB PREMIER 2 FHD
@@ -128,15 +141,53 @@ http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=663683&ex
 #EXTINF:-1 tvg-logo="http://picon.tivi-ott.net:25461/picon/GREECE/Novasports21.png" group-title="PREMIER LEAGUE",┃GR┃ NOVA SPORTS PREMIER LEAGUE SD
 http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62&stream=1648349&extension=ts&play_token=ZZoSJFE7sJ
 
+==============================================================
 
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/984663.png" group-title="PREMIER LEAGUE",DE| SKY SPORT PREMIER LEAGUE HEVC
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=984663&extension=ts&play_token=XiCwKTay1x
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/GERMANY/1964157.png" group-title="PREMIER LEAGUE",WOW| SKY SPORT PREMIER LEAGUE ᴴᴰ ◉
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1964157&extension=ts&play_token=PZdTKUbSmf
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/GERMANY/1964158.png" group-title="PREMIER LEAGUE",WOW| SKY SPORT TOP EVENT ᴴᴰ ◉
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1964158&extension=ts&play_token=x29cl6VXmb
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/971711.png" group-title="PREMIER LEAGUE",DE| SKY SPORT PREMIER LEAGUE FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=971711&extension=ts&play_token=Lmbvw1r3IB
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/971710.png" group-title="PREMIER LEAGUE",DE| SKY SPORT MIX FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=971710&extension=ts&play_token=xb3MJqqTgm
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/1235941.png" group-title="PREMIER LEAGUE",DE| SKY SPORT TOP EVENT FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1235941&extension=ts&play_token=voChfqaEKM
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/1235934.png" group-title="PREMIER LEAGUE",DE| SKY SPORT TOP EVENT HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1235934&extension=ts&play_token=ns5SgjlSte
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/1235927.png" group-title="PREMIER LEAGUE",DE| SKY SPORT PREMIER LEAGUE FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1235927&extension=ts&play_token=zT0JdjLS6N
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/1235920.png" group-title="PREMIER LEAGUE",DE| SKY SPORT PREMIER LEAGUE HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1235920&extension=ts&play_token=vzV8SGQny3
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/1235913.png" group-title="PREMIER LEAGUE",DE| SKY SPORT MIX FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1235913&extension=ts&play_token=NhjUGSfCqq
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/1235906.png" group-title="PREMIER LEAGUE",DE| SKY SPORT MIX HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1235906&extension=ts&play_token=QRMsw7DHWs
 
+==============================================================
 
-
-
-
-
-
-
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/30498.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS FOOTBALL FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=30498&extension=ts&play_token=FytAe8xjm7
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/79478.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS FOOTBALL
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=79478&extension=ts&play_token=mJs77G1Ldj
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/SKYSPORTSFOOTBALL.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS FOOTBALL HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=83452&extension=ts&play_token=lETwmhpwR2
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/SKYSPORTSMAINEVENT.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS MAIN EVENT UHD/4K
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1641636&extension=ts&play_token=TfsMA13I0H
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/30496.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS MAIN EVENT FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=30496&extension=ts&play_token=dSpHL8fGHt
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/SKYSPORTSMAINEVENTS.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS MAIN EVENTS HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=83450&extension=ts&play_token=tjENFzOKuI
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/SKYSPORTSMAINEVENT.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS MAIN EVENTS HD(BK)
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=1448189&extension=ts&play_token=BMLXDSwJL1
+#EXTINF:-1 tvg-logo="http://103.176.90.92/images/30495.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS MIX FHD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=30495&extension=ts&play_token=8es64wpr79
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/SKYSPORTSMIX.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS MIX HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=83449&extension=ts&play_token=uzbA0fZAsL
+#EXTINF:-1 tvg-logo="http://103.176.90.154/picons/logos/UKNEW/SKYSPORTSPL.png" group-title="PREMIER LEAGUE",UK| SKY SPORTS PL HD
+http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36&stream=83447&extension=ts&play_token=609jFOc1T6
 
 
 
