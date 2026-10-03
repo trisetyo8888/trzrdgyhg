@@ -1,18 +1,40 @@
-name: Refresh M3U Schedule Test
+name: Refresh M3U Schedule
 
 on:
   schedule:
-    - cron: '17 */6 * * *'
+    - cron: '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  schedule-test:
+  refresh:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check scheduled run
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Process M3U file
         run: |
-          echo "Workflow berjalan."
-          date -u
+          if [ ! -f input/playlist.m3u ]; then
+            echo "File input/playlist.m3u belum tersedia"
+            exit 1
+          fi
+
+          mkdir -p CHANNEL
+          cp input/playlist.m3u CHANNEL/playlist.m3u
+
+      - name: Save changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CHANNEL/playlist.m3u
+
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan file"
+          else
+            git commit -m "Refresh M3U playlist"
+            git push
+          fi
