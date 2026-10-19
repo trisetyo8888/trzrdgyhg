@@ -7,15 +7,15 @@ import json
 m3u_content = "#EXTM3U\n"
 total_all_channels = 0
 
-if not os.path.exists('Portal.txt'):
-    print("Error: File Portal.txt tidak ditemukan!")
+if not os.path.exists('portal.txt'):
+    print("Error: File portal.txt tidak ditemukan!")
     sys.exit(1)
 
-with open('Portal.txt', 'r') as f:
+with open('portal.txt', 'r') as f:
     lines = [line.strip() for line in f if line.strip()]
 
 if not lines:
-    print("Error: File Portal.txt kosong!")
+    print("Error: File portal.txt kosong!")
     sys.exit(1)
 
 print(f"Membaca {len(lines)} akun MAC Portal dari file...")
