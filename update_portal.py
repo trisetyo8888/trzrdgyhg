@@ -4,7 +4,7 @@ import random
 import string
 
 # --- KONFIGURASI PORTAL ---
-PORTAL_URL = "https://foxbleu.pro/c/" # Jalur portal (pastikan ada /c/ di akhir)
+PORTAL_URL = "http://foxbleu.pro/c/" # Jalur portal (pastikan ada /c/ di akhir)
 MAC_ADDRESS = "00:1A:79:86:82:B5"                   # Alamat MAC Anda
 
 # Membuat Serial Number & Device ID tiruan agar lolos blokir server
