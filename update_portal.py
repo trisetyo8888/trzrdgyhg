@@ -5,7 +5,7 @@ import string
 import time
 
 # ==================== KONFIGURASI UTAMA ====================
-PORTAL_URL = "http://foxbleu.pro" 
+PORTAL_URL = "http://foxbleu.pro/c" 
 MAC_ADDRESS = "00:1A:79:86:82:B5"
 # ===========================================================
 
