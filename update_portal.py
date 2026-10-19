@@ -2,17 +2,17 @@ import requests
 import json
 import random
 import string
-import urllib.parse
+import time
 
 # ==================== KONFIGURASI UTAMA ====================
 PORTAL_URL = "http://foxbleu.pro" 
-MAC_ADDRESS = "00:1A:79:86:82:B5"  # Sesuai log error Anda sebelumnya
+MAC_ADDRESS = "00:1A:79:86:82:B5"
 # ===========================================================
 
 def generate_hex(length):
     return ''.join(random.choices(string.hexdigits.lower(), k=length))
 
-# Membuat identitas perangkat palsu tingkat lanjut
+# Membuat identitas perangkat tiruan agar lolos dari deteksi bot
 serial_number = "MAG" + generate_hex(10).upper()
 device_id = generate_hex(40).upper()
 device_id2 = generate_hex(40).upper()
@@ -27,7 +27,32 @@ headers = {
     "Connection": "keep-alive"
 }
 
-def get_token():
+def fetch_free_proxies():
+    print("[*] Mengambil daftar proxy publik gratis...")
+    proxy_urls = [
+        "https://proxyscrape.com",
+        "https://githubusercontent.com"
+    ]
+    proxies = []
+    for url in proxy_urls:
+        try:
+            res = requests.get(url, timeout=10)
+            if res.status_code == 200:
+                # Memisahkan baris teks untuk mendapatkan list IP:Port
+                found = [line.strip() for line in res.text.split("\n") if line.strip() and not line.startswith("{")]
+                proxies.extend(found)
+        except:
+            continue
+    # Acak daftar proxy agar tidak menggunakan IP yang sama terus-menerus
+    random.shuffle(proxies)
+    print(f"[+] Berhasil mengumpulkan {len(proxies)} kandidat proxy.")
+    return proxies
+
+def test_handshake_with_proxy(proxy_str):
+    proxy_dict = {
+        "http": f"http://{proxy_str}",
+        "https": f"http://{proxy_str}"
+    }
     params = {
         "type": "stb", "action": "handshake", "js": "1",
         "sn": serial_number, "stb_type": "MAG250", "image_version": "218",
@@ -35,19 +60,21 @@ def get_token():
         "mac": MAC_ADDRESS
     }
     try:
-        # Menggunakan HTTP biasa (port 80) sesuai domain foxbleu
-        res = requests.get(PORTAL_URL, headers=headers, params=params, timeout=15)
+        # Mencoba melakukan handshake ke server FoxBleu menggunakan proxy pilihan
+        res = requests.get(PORTAL_URL, headers=headers, params=params, proxies=proxy_dict, timeout=7)
         data = res.json()
-        return data.get("js", {}).get("token")
-    except Exception as e:
-        print(f"[-] Gagal Handshake: {e}")
-        return None
+        token = data.get("js", {}).get("token")
+        if token:
+            return token, proxy_dict
+    except:
+        pass
+    return None, None
 
-def get_categories(token):
+def get_categories(token, proxies):
     params = {"type": "itv", "action": "get_genres", "token": token}
     categories = {}
     try:
-        res = requests.get(PORTAL_URL, headers=headers, params=params, timeout=15).json()
+        res = requests.get(PORTAL_URL, headers=headers, params=params, proxies=proxies, timeout=15).json()
         for item in res.get("js", []):
             categories[item["id"]] = item["title"]
     except:
@@ -55,30 +82,42 @@ def get_categories(token):
     return categories
 
 def main():
-    print("[*] Memulai proses bypass jabat tangan (Handshake)...")
-    token = get_token()
+    proxy_list = fetch_free_proxies()
+    token = None
+    active_proxy = None
+    
+    print("[*] Memulai rotasi proxy untuk mencari koneksi yang lolos blokir...")
+    # Mencoba maksimal 30 proxy teratas dari daftar acak
+    for i, proxy in enumerate(proxy_list[:30]):
+        print(f"    [{i+1}/30] Mencoba Proxy: {proxy} ...")
+        token, active_proxy = test_handshake_with_proxy(proxy)
+        if token:
+            print(f"\n[+] BERHASIL TANDING TANGAN! Menggunakan Proxy: {proxy}")
+            print(f"[+] Token Sesi Aktif Didapatkan: {token}\n")
+            break
+            
     if not token:
-        print("[-] Akses tetap ditolak oleh server. IP GitHub Anda kemungkinan diblokir.")
+        print("\n[-] Semua proxy gagal menembus server. Server mendeteksi JSON bermasalah / IP diblokir.")
+        print("[-] Disarankan jalankan secara LOKAL di laptop Anda tanpa GitHub Actions.")
         return
     
-    print(f"[+] Handshake Sukses! Token Sesi Aktif: {token}")
-    categories = get_categories(token)
+    # Ambil data kategori menggunakan proxy yang terbukti aktif
+    categories = get_categories(token, active_proxy)
     
     params = {"type": "itv", "action": "get_all_channels", "token": token}
     try:
-        res = requests.get(PORTAL_URL, headers=headers, params=params, timeout=20).json()
+        print("[*] Mengunduh seluruh daftar siaran via proxy...")
+        res = requests.get(PORTAL_URL, headers=headers, params=params, proxies=active_proxy, timeout=25).json()
         channels = res.get("js", {}).get("data", [])
-    except:
-        print("[-] Gagal mengunduh daftar siaran.")
+    except Exception as e:
+        print(f"[-] Gagal mengambil siaran: {e}")
         return
 
     if not channels:
-        print("[-] Tidak ada siaran ditemukan.")
+        print("[-] Server tidak mengembalikan data siaran.")
         return
 
-    print(f"[+] Berhasil memuat {len(channels)} siaran. Menyusun Playlist M3U...")
-
-    # Membersihkan domain utama untuk link streaming
+    print(f"[+] Sukses mengekstrak {len(channels)} siaran. Menyusun file M3U...")
     base_stream_url = PORTAL_URL.replace("/c/", "")
 
     with open("playlist.m3u", "w", encoding="utf-8") as f:
@@ -86,8 +125,6 @@ def main():
         
         for ch in channels:
             name = ch.get("name", "").strip()
-            
-            # Abaikan baris pembatas dekorasi palsu (seperti tanda bintang/garis)
             if not name or name.startswith("-") or "★" in name or "●" in name:
                 continue
                 
@@ -95,35 +132,29 @@ def main():
             if not ch_cmd:
                 continue
 
-            # Trik Inti: Bersihkan perintah internal STB (ffmpeg / ffrt)
             clean_cmd = ch_cmd.replace("ffmpeg ", "").replace("ffrt ", "").replace("auto ", "")
             
-            # Trik Inti: Bangun URL Streaming agar menyertakan Token Resmi
             if clean_cmd.startswith("http"):
                 stream_url = clean_cmd
             else:
-                # Format URL standar Stalker Middleware untuk pemutaran eksternal
                 stream_url = f"{base_stream_url}/{clean_cmd}"
 
-            # Menyisipkan token ke dalam URL siaran jika server membutuhkannya
+            # Menyisipkan token agar link bisa diputar di OTT Navigator
             if "?" in stream_url:
                 stream_url += f"&token={token}"
             else:
                 stream_url += f"?token={token}"
 
-            # Ambil kategori asli
             genre_id = ch.get("tv_genre_id", "")
             group = categories.get(genre_id, "Lain-Lain")
             
-            # Ambil logo stasiun TV asli dari server
             logo = ch.get("logo", "")
             logo_attr = f' tvg-logo="{logo}"' if logo else ""
             
-            # Tulis data dengan struktur format Extended M3U terlengkap
             f.write(f'#EXTINF:-1{logo_attr} group-title="{group}",{name}\n')
             f.write(f'{stream_url}\n')
             
-    print("[+] SELESAI! File 'playlist.m3u' kini memiliki kategori, logo, dan tautan bypass token.")
+    print("[+] SELESAI! File 'playlist.m3u' berhasil dibuat dengan kategori dan logo.")
 
 if __name__ == "__main__":
     main()
