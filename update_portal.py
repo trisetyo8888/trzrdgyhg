@@ -132,5 +132,5 @@ for index, account in enumerate(lines, start=1):
         continue
 
 print(f"\nSelesai! Total keseluruhan: {total_all_channels} channel berhasil dikumpulkan.")
-with open('mac_playlist.m3u', 'w', encoding='utf-8') as f:
+with open('playlist.m3u', 'w', encoding='utf-8') as f:
     f.write(m3u_content)
