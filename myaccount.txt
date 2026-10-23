@@ -1,1 +1,4 @@
-
+channel 1 : http://nk.team-tx.st:80/play/live.php?mac=00:1A:79:1C:05:36
+channel 2 : http://nexusconnects.org:80/play/live.php?mac=00:1A:79:C8:4D:62
+channel 3 : http://tlmr.online:80/play/live.php?mac=00:1A:79:53:35:98
+channel 4 : http://foxbleu.pro:80/play/live.php?mac=00:1A:79:86:82:B5
